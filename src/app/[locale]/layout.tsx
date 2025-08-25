@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { QueryProvider, ThemeProvider } from "@/components/providers";
+import { StoreProvider } from "@/components/providers/store-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,18 +40,20 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider>
-          <QueryProvider>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="dark"
-              enableSystem
-              disableTransitionOnChange
-            >
-              {children}
-            </ThemeProvider>
-          </QueryProvider>
-        </NextIntlClientProvider>
+        <StoreProvider>
+          <NextIntlClientProvider>
+            <QueryProvider>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="dark"
+                enableSystem
+                disableTransitionOnChange
+              >
+                {children}
+              </ThemeProvider>
+            </QueryProvider>
+          </NextIntlClientProvider>
+        </StoreProvider>
       </body>
     </html>
   );
