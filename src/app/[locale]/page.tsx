@@ -1,21 +1,20 @@
-import { hasLocale, useTranslations } from "next-intl";
+import { hasLocale } from "next-intl";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ModeToggle } from "@/components/molecules/mode-toggle";
+import { ProductsSection } from "@/components/organisms/products-section/products-section";
 export default function Home({ params }: { params: { locale: string } }) {
   if (!hasLocale(routing.locales, params.locale)) {
     notFound();
   }
-  const t = useTranslations("HomePage");
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div className="">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <ModeToggle />
-        <div>
-          <h1>{t("title")}</h1>
-          <a href="/about">{t("about")}</a>
-        </div>
+        <ProductsSection />
+        <div></div>
         <Image
           className="dark:invert"
           src="/next.svg"

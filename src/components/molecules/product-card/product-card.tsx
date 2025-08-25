@@ -10,7 +10,7 @@ import React from "react";
 
 const ProductCardComponent = (props: ProductCardProps) => {
   return (
-    <Card className="w-full rounded-lg p-5">
+    <Card data-name="ProductCard" className="w-full rounded-lg p-5">
       <div className="relative w-full mx-auto mb-3 h-[250px] max-w-[230px]">
         <Image
           src={props.image}
