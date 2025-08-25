@@ -1,5 +1,18 @@
 {
   "common": {
     "search": "Cerca..."
+  },
+  "placeholder": {
+    "email": "Inserisci la tua email"
+  },
+  "fieldsValidation": {
+    "generic": {
+      "required": "Campo obbligatorio.",
+      "invalid": "Campo non valido"
+    },
+    "email": { "invalid": "Indirizzo email non valido." }
+  },
+  "formErrors": {
+    "login": "Credenziali Email non valido"
   }
 }

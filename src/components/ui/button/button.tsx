@@ -5,7 +5,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 import { buttonVariants } from "./button.styles";
-import { ButtonProps } from "./button.props";
+import type { ButtonProps } from "./button.props";
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -23,6 +23,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const Comp = asChild ? Slot : "button";
+
+    if (asChild) {
+      return (
+        <Comp
+          ref={ref}
+          data-slot="button"
+          className={cn(buttonVariants({ variant, size, className }))}
+          {...props}
+        >
+          {children}
+        </Comp>
+      );
+    }
 
     return (
       <Comp

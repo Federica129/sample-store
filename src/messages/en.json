@@ -1,5 +1,18 @@
 {
   "common": {
     "search": "Search..."
+  },
+  "placeholder": {
+    "email": "Enter your email"
+  },
+  "fieldsValidation": {
+    "generic": {
+      "required": "Required field",
+      "invalid": "Invalid field"
+    },
+    "email": { "invalid": "Invalid email address" }
+  },
+  "formErrors": {
+    "login": "Invalid email credentials"
   }
 }
