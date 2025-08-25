@@ -1,11 +1,12 @@
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { hasLocale } from "next-intl";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { redirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
-import { QueryProvider, ThemeProvider } from "@/components/providers";
-import { StoreProvider } from "@/components/providers/store-provider";
+import Footer from "@/components/organisms/footer/footer";
+import ClientInitializer from "@/components/client-initializer";
+import { Providers } from "@/components/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,7 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
   const { locale } = await params;
 
@@ -40,20 +41,11 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <StoreProvider>
-          <NextIntlClientProvider>
-            <QueryProvider>
-              <ThemeProvider
-                attribute="class"
-                defaultTheme="dark"
-                enableSystem
-                disableTransitionOnChange
-              >
-                {children}
-              </ThemeProvider>
-            </QueryProvider>
-          </NextIntlClientProvider>
-        </StoreProvider>
+        <Providers>
+          <ClientInitializer />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
