@@ -1,6 +1,5 @@
 {
-  "HomePage": {
-    "title": "Ciao world!",
-    "about": "Vai nella about page"
+  "common": {
+    "search": "Cerca..."
   }
 }
