@@ -1,7 +1,7 @@
 "use client";
 
 import { useGetProducts } from "@/api/api/hook/use-get-products";
-import { Container } from "@/components/molecules/container/container";
+import { Container } from "@/components/molecules/container";
 import { ListProducts } from "@/components/molecules/list-products";
 import { Section } from "@/components/molecules/section";
 import { Input } from "@/components/ui/input";
