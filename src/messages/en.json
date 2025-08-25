@@ -2,6 +2,11 @@
   "common": {
     "search": "Search..."
   },
+  "welcome": {
+    "title": "Welcome",
+    "copy": "Discover the latest arrivals and the best deals just for you. <br/> Browse our products and find exactly what you’ve been looking for!",
+    "cta": "Go to products"
+  },
   "placeholder": {
     "email": "Enter your email"
   },

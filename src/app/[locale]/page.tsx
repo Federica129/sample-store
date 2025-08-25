@@ -1,10 +1,9 @@
 import { ProtectedRoute } from "@/components/molecules/protect-routes/protect-routes";
+import { WelcomeSection } from "@/components/organisms/welcome-section/welcome-section";
 export default function Home() {
   return (
-    <div className="">
-      <main>
-        <ProtectedRoute>Home</ProtectedRoute>
-      </main>
-    </div>
+    <ProtectedRoute>
+      <WelcomeSection />
+    </ProtectedRoute>
   );
 }
