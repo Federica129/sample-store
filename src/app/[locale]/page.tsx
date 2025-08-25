@@ -1,12 +1,5 @@
-import { hasLocale } from "next-intl";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
 import { ProtectedRoute } from "@/components/molecules/protect-routes/protect-routes";
-export default function Home({ params }: { params: { locale: string } }) {
-  if (!hasLocale(routing.locales, params.locale)) {
-    notFound();
-  }
-
+export default function Home() {
   return (
     <div className="">
       <main>
