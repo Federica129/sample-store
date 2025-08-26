@@ -4,7 +4,11 @@
     "noResult": "Nessun prodotto trovato per la tua ricerca.",
     "language": "Lingua",
     "logout": "Esci",
-    "openMenu": "Apri menu"
+    "openMenu": "Apri menu",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "editProfile": "Modifica profilo",
+    "login": "Accedi"
   },
   "welcome": {
     "title": "Benvenuto",
@@ -21,14 +25,40 @@
   "placeholder": {
     "email": "Inserisci la tua email"
   },
+  "footer": {
+    "shop": "Shop",
+    "newArrivals": "Nuovi Arrivi",
+    "men": "Uomo",
+    "women": "Donna",
+    "accessories": "Accessori",
+    "support": "Assistenza",
+    "contacts": "Contatti",
+    "faq": "FAQ",
+    "returnsRefunds": "Resi & Rimborsi",
+    "shipping": "Spedizioni",
+    "followUs": "Seguici"
+  },
   "fieldsValidation": {
+    "fieldName": {
+      "email": "Email",
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "address": "Indirizzo",
+      "city": "Città",
+      "zip": "CAP",
+      "country": "Paese"
+    },
     "generic": {
       "required": "Campo obbligatorio.",
-      "invalid": "Campo non valido"
+      "invalid": "Campo non valido",
+      "short2": "Richiesto almeno 2 caratteri"
     },
     "email": { "invalid": "Indirizzo email non valido." }
   },
   "formErrors": {
     "login": "Credenziali Email non valido"
+  },
+  "messages": {
+    "editSuccess": "Le tue modifiche sono state salvate con successo!"
   }
 }

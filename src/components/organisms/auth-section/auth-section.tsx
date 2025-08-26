@@ -31,12 +31,24 @@ export function AuthSection() {
   const handleLogin = ({ email }: { email: string }) => {
     setIsLoading(true);
     setFormError("");
+
     const timeoutId = setTimeout(() => {
-      if (email === FAKE_USER.email) {
-        dispatch(login(FAKE_USER));
+      const storedUser = localStorage.getItem("user");
+      let userToLogin;
+
+      if (storedUser) {
+        userToLogin = JSON.parse(storedUser);
+      } else {
+        userToLogin = FAKE_USER;
+        localStorage.setItem("user", JSON.stringify(FAKE_USER));
+      }
+
+      if (email === userToLogin.email) {
+        dispatch(login({ ...userToLogin, isLogged: true })); // login con i dati dal localStorage
       } else {
         setFormError(t("formErrors.login"));
       }
+
       setIsLoading(false);
     }, 1000);
 
@@ -49,7 +61,7 @@ export function AuthSection() {
       className="flex items-center justify-center h-[calc(100dvh-65px)]"
     >
       <Container>
-        <TextBlock title="Login" />
+        <TextBlock title={t("common.login")} />
         <FormProvider {...form}>
           <Auth
             onSubmit={handleSubmit(handleLogin)}

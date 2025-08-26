@@ -8,20 +8,26 @@ import { Logo } from "@/components/atoms/logo";
 import { Container } from "@/components/molecules/container";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
+import { useTranslations } from "next-intl";
 
-const footerLinks = {
-  shop: ["Nuovi Arrivi", "Uomo", "Donna", "Accessori"],
-  support: ["Contatti", "FAQ", "Resi & Rimborsi", "Spedizioni"],
+const footerLinks = (t: (key: string) => string) => {
+  return {
+    shop: [t("newArrivals"), t("men"), t("women"), t("accessories")],
+    support: [t("contacts"), t("faq"), t("returnsRefunds"), t("shipping")],
+  };
 };
 
-const footerSections = [
-  { title: "Shop", links: footerLinks.shop },
-  { title: "Assistenza", links: footerLinks.support },
-];
+const footerSections = (t: (key: string) => string) => {
+  return [
+    { title: t("shop"), links: footerLinks(t).shop },
+    { title: t("support"), links: footerLinks(t).support },
+  ];
+};
 
 const socialIcons = [MdFacebook, IoLogoInstagram, IoLogoTwitter];
 
 export default function Footer() {
+  const t = useTranslations("footer");
   const handleClick = () => {
     alert(`Link fittizio: solo a scopo dimostrativo!`);
   };
@@ -36,7 +42,7 @@ export default function Footer() {
         <Logo isFooter />
 
         <div className="mt-[1.5rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[2rem]">
-          {footerSections.map((section) => (
+          {footerSections(t).map((section) => (
             <div key={section.title}>
               <h3 className="text-lg text-orange font-semibold mb-[1rem]">
                 {section.title}
@@ -55,7 +61,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg text-orange font-semibold mb-[1rem]">
-              Seguici
+              {t("followUs")}
             </h3>
             <div className="flex gap-[1rem]">
               {socialIcons.map((icon, i) => {

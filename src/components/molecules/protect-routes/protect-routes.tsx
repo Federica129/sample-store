@@ -22,18 +22,21 @@ export function ProtectedRoute({ children, isLoginPage = false }: Props) {
   useEffect(() => {
     if (!hydrated) return;
 
-    if (!isLoginPage && !user) {
+    if (!isLoginPage && !user.isLogged) {
       router.replace("/login");
     }
 
-    if (isLoginPage && user) {
+    if (isLoginPage && user.isLogged) {
       router.replace("/");
     }
   }, [hydrated, user, isLoginPage]);
 
-  if (!hydrated) return null;
-  if (!isLoginPage && !user) return null;
-  if (isLoginPage && user) return null;
+  if (!hydrated)
+    return <div className="mt-[65px] md:min-h-[calc(100dvh-65px)]" />;
+  if (!isLoginPage && !user.isLogged)
+    return <div className="mt-[65px] md:min-h-[calc(100dvh-65px)]" />;
+  if (isLoginPage && user.isLogged)
+    return <div className="mt-[65px] md:min-h-[calc(100dvh-65px)]" />;
 
   return <>{children}</>;
 }

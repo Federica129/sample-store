@@ -10,8 +10,13 @@ export default function ClientInitializer() {
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
+
     if (storedUser) {
-      dispatch(login(FAKE_USER));
+      dispatch(login(JSON.parse(storedUser)));
+    } else {
+      const initialUser = { ...FAKE_USER, isLogged: false };
+      localStorage.setItem("user", JSON.stringify(initialUser));
+      dispatch(login(initialUser));
     }
   }, [dispatch]);
 
