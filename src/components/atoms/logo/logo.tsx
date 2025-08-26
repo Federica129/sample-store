@@ -11,7 +11,14 @@ export function Logo({ isFooter = false }: { isFooter?: boolean }) {
       href="/"
       style={{ display: "flex", gap: "1rem", alignItems: "center" }}
     >
-      <Image src={logo} sizes="10vw" width={48} height={48} alt={"logo"} />
+      <Image
+        src={logo}
+        sizes="10vw"
+        width={48}
+        height={48}
+        alt="logo"
+        priority
+      />
       {isFooter && <span className="text-primary font-bold">SampleStore</span>}
     </Link>
   );

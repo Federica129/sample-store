@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import type { ProductsSectionProps } from "./products-section.props";
 import { SkeletonListProducts } from "@/components/molecules/skeleton-list-products/skeleton-list-products";
+import { NoResultMessage } from "@/components/molecules/no-result-message";
 
 export function ProductsSection(props: ProductsSectionProps) {
   const { data, isLoading } = useGetProducts();
@@ -22,8 +23,11 @@ export function ProductsSection(props: ProductsSectionProps) {
     [];
 
   return (
-    <Section data-name="ProductsSection">
-      <Container className="flex flex-col gap-8">
+    <Section
+      data-name="ProductsSection"
+      className="md:min-h-[calc(100dvh-65px)]"
+    >
+      <Container className="h-full flex flex-col gap-8">
         <TextBlock align="left" {...props} />
         <Input
           placeholder={t("search")}
@@ -35,9 +39,7 @@ export function ProductsSection(props: ProductsSectionProps) {
         ) : filteredProducts.length > 0 ? (
           <ListProducts data={filteredProducts} />
         ) : (
-          <div className="py-20 flex justify-center">
-            <span className="text-orange font-bold">{t("noResult")}</span>
-          </div>
+          <NoResultMessage />
         )}
       </Container>
     </Section>

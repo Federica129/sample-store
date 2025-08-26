@@ -1,7 +1,10 @@
 {
   "common": {
     "search": "Cerca...",
-    "noResult": "Nessun prodotto trovato per la tua ricerca."
+    "noResult": "Nessun prodotto trovato per la tua ricerca.",
+    "language": "Lingua",
+    "logout": "Esci",
+    "openMenu": "Apri menu"
   },
   "welcome": {
     "title": "Benvenuto",
@@ -11,6 +14,9 @@
   "products": {
     "title": "Prodotti",
     "copy": "Scopri le ultime novità e le migliori offerte pensate per te."
+  },
+  "profile": {
+    "title": "Profilo"
   },
   "placeholder": {
     "email": "Inserisci la tua email"

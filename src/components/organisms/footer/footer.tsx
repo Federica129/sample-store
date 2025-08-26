@@ -31,7 +31,7 @@ export default function Footer() {
   if (!user) return null;
 
   return (
-    <footer data-name="footer">
+    <footer data-name="footer" className="border-t pt-[2rem]">
       <Container>
         <Logo isFooter />
 

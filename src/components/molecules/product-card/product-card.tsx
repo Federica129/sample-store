@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MdAddShoppingCart } from "react-icons/md";
 import { Button } from "@/components/ui/button";
-import { getStarRating } from "@/utils/get-star-rating";
+import { getStarRating } from "@/utils/functions/get-star-rating";
 import type { ProductCardProps } from "./product-card.props";
 import { Card } from "@/components/ui/card";
 import React from "react";
