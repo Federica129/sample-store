@@ -1,7 +1,10 @@
 {
   "common": {
     "search": "Search...",
-    "noResult": "No products found for your search."
+    "noResult": "No products found for your search.",
+    "language": "Language",
+    "logout": "Logout",
+    "openMenu": "Open menu"
   },
   "welcome": {
     "title": "Welcome",
@@ -11,6 +14,9 @@
   "products": {
     "title": "Products",
     "copy": "Discover the latest arrivals and the best deals just for you."
+  },
+  "profile": {
+    "title": "Profile"
   },
   "placeholder": {
     "email": "Enter your email"

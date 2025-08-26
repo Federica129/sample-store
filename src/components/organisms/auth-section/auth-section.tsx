@@ -46,7 +46,7 @@ export function AuthSection() {
   return (
     <Section
       data-name="AuthSection"
-      className="h-screen flex items-center justify-center"
+      className="flex items-center justify-center h-[calc(100dvh-65px)]"
     >
       <Container>
         <TextBlock title="Login" />
