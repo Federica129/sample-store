@@ -1,11 +1,16 @@
 {
   "common": {
-    "search": "Search..."
+    "search": "Search...",
+    "noResult": "No products found for your search."
   },
   "welcome": {
     "title": "Welcome",
     "copy": "Discover the latest arrivals and the best deals just for you. <br/> Browse our products and find exactly what you’ve been looking for!",
     "cta": "Go to products"
+  },
+  "products": {
+    "title": "Products",
+    "copy": "Discover the latest arrivals and the best deals just for you."
   },
   "placeholder": {
     "email": "Enter your email"

@@ -1,7 +1,7 @@
 import type { InputProps } from "./input.props";
 import { Input as ShadcnInput } from "@/components/ui/input";
 import { Controller } from "react-hook-form";
-import { InputWrapper } from "../InputWrapper";
+import { InputWrapper } from "../input-wrapper";
 
 export function Input(props: InputProps) {
   const {

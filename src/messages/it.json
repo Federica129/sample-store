@@ -1,11 +1,16 @@
 {
   "common": {
-    "search": "Cerca..."
+    "search": "Cerca...",
+    "noResult": "Nessun prodotto trovato per la tua ricerca."
   },
   "welcome": {
     "title": "Benvenuto",
     "copy": "Scopri le ultime novità e le migliori offerte pensate per te. Sfoglia i nostri prodotti e trova quello che stavi cercando!",
     "cta": "Scopri i prodotti"
+  },
+  "products": {
+    "title": "Prodotti",
+    "copy": "Scopri le ultime novità e le migliori offerte pensate per te."
   },
   "placeholder": {
     "email": "Inserisci la tua email"
