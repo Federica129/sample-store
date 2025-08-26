@@ -38,7 +38,7 @@ const ProductCardComponent = (props: ProductCardProps) => {
           <span className="text-lg font-bold text-gray-900 dark:text-gray-100">
             €{props.price}
           </span>
-          <Button className="flex items-center justify-center rounded-md bg-gray-900 px-3 text-white transition hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300">
+          <Button variant="tertiary">
             <MdAddShoppingCart size={20} />
           </Button>
         </div>

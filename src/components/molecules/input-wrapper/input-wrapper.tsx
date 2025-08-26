@@ -1,4 +1,4 @@
-import { InputWrapperProps } from "./InputWrapper.props";
+import { InputWrapperProps } from "./input-wrapper.props";
 import { cn } from "@/lib/utils";
 
 export const InputWrapper = ({

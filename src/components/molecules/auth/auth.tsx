@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "../input/input";
 import { AuthProps } from "./auth.props";
-import { InputWrapper } from "../InputWrapper";
+import { InputWrapper } from "../input-wrapper";
 import { useTranslations } from "next-intl";
 
 export function Auth({ onSubmit, error, isLoading = false }: AuthProps) {

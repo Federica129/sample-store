@@ -16,7 +16,7 @@ export function WelcomeSection() {
   const textBlockProps = {
     title: `${t("title")} ${user?.firstName ?? ""}!`,
     copy: t("copy"),
-    cta: { label: t("cta"), href: "/prodotti" },
+    cta: { label: t("cta"), href: "/products" },
   };
 
   return (
