@@ -22,10 +22,13 @@ const menuDesktopArray = (t: (key: string) => string) => [
 export default function Navbar() {
   const t = useTranslations();
   const user = useSelector((state: RootState) => state.auth.user);
-  const isLogged = user;
+  const isLogged = user.isLogged;
 
   return (
-    <header data-name="Navbar" className="w-full border-b">
+    <header
+      data-name="Navbar"
+      className="fixed top-0 left-0 z-50 bg-background w-full border-b"
+    >
       <Container className="w-full flex h-16 items-center justify-between">
         <div className="flex items-center gap-8">
           <Logo />

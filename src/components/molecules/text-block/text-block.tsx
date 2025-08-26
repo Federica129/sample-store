@@ -16,7 +16,7 @@ export function TextBlock({
   return (
     <div className={styles.root}>
       <TagTitle className={styles.title}>{title}</TagTitle>
-      {!!copy && <p>{copy}</p>}
+      {!!copy && <p dangerouslySetInnerHTML={{ __html: copy }} />}
       {!!cta?.label && (
         <Cta className={styles.cta} variant="tertiary" {...cta}>
           {cta.label}

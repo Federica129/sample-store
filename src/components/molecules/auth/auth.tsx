@@ -5,7 +5,7 @@ import { InputWrapper } from "../input-wrapper";
 import { useTranslations } from "next-intl";
 
 export function Auth({ onSubmit, error, isLoading = false }: AuthProps) {
-  const t = useTranslations("placeholder");
+  const t = useTranslations();
 
   return (
     <form
@@ -17,7 +17,7 @@ export function Auth({ onSubmit, error, isLoading = false }: AuthProps) {
         <Input
           name="email"
           type="email"
-          placeholder={t("email")}
+          placeholder={t("placeholder.email")}
           className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
@@ -28,7 +28,7 @@ export function Auth({ onSubmit, error, isLoading = false }: AuthProps) {
         type="submit"
         isLoading={isLoading}
       >
-        Login
+        {t("common.login")}
       </Button>
       {!!error && <p className="text-red-600 mt-[0.5rem]">{error}</p>}
     </form>

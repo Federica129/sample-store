@@ -2,11 +2,20 @@ import { UserData } from "@/types/user";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AuthState {
-  user: UserData | null;
+  user: UserData;
 }
 
 const initialState: AuthState = {
-  user: null,
+  user: {
+    email: "",
+    firstName: "",
+    lastName: "",
+    address: "",
+    city: "",
+    zip: "",
+    country: "",
+    isLogged: false,
+  },
 };
 
 const authSlice = createSlice({
@@ -14,12 +23,12 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     login: (state, action: PayloadAction<UserData>) => {
-      state.user = action.payload;
-      localStorage.setItem("user", JSON.stringify(action.payload));
+      state.user = { ...state.user, ...action.payload };
+      localStorage.setItem("user", JSON.stringify({ ...action.payload }));
     },
     logout: (state) => {
-      state.user = null;
-      localStorage.removeItem("user");
+      state.user = { ...state.user, isLogged: false };
+      localStorage.setItem("user", JSON.stringify(state.user));
     },
     updateUser: (state, action: PayloadAction<Partial<UserData>>) => {
       if (state.user) {
