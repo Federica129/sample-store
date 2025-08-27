@@ -38,6 +38,11 @@
     "checkout": "Proceed to Checkout",
     "continueShopping": "Continue Shopping"
   },
+  "notFound": {
+    "title": "Oops! 404",
+    "description": "Looks like the page you were looking for vanished into thin air.",
+    "cta": "Go back Home"
+  },
   "footer": {
     "shop": "Shop",
     "newArrivals": "New Arrivals",
@@ -79,6 +84,7 @@
     "emptyCart": "Your cart is empty",
     "addProduct": "Add products to your cart to see them here."
   },
+
   "seo": {
     "home": {
       "title": "Welcome to SampleStore",
