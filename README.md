@@ -6,7 +6,7 @@ Questo progetto utilizza **Next.js 15**, **Tailwind CSS**, **shadcn/ui**, **Redu
 
 ### Prerequisiti
 - Yarn
-- Node.js: `^18.18.0 || ^19.8.0 || >= 20.0.0`
+- Node.js: `22.18.0`
 
 ### Installazione
 - Clonare il repository: `git clone https://github.com/Federica129/sample-store.git`
@@ -23,7 +23,8 @@ Questo progetto utilizza **Next.js 15**, **Tailwind CSS**, **shadcn/ui**, **Redu
 - **Redux Toolkit** per gestione globale dello stato (carrello, utente).  
 - **i18n** per la traduzione dei testi.  
 - **react-hook-form** e **yup** per la gestione e validazione dei form.
-- **TanStack Query** per gestione asincrona e caching dei dati lato client  
+- **TanStack Query** per gestione asincrona e caching dei dati lato client
+- **Vitest** per i test dei componenti
 
 ## Componenti principali
 
