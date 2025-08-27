@@ -5,7 +5,7 @@ export const FAKE_USER = {
   firstName: "Mario",
   lastName: "Rossi",
   address: "Via Roma 10, Milano",
-  city: "Palermo",
+  city: "Milano",
   zip: "90100",
   country: "Italy",
   isLogged: false,

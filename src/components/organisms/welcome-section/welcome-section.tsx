@@ -21,7 +21,7 @@ export function WelcomeSection() {
 
   return (
     <Section data-name="WelcomeSection" className="md:h-[calc(100dvh-65px)]">
-      <Container className="h-full grid grid-cols-1 md:grid-cols-2 items-center">
+      <Container className="h-full grid gap-[1rem] grid-cols-1 md:grid-cols-2 items-center">
         <TextBlock {...textBlockProps} align="left" />
         <Image src={illustration} alt="" priority />
       </Container>

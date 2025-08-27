@@ -43,7 +43,7 @@ export function ProfileSection() {
         lastName: user.lastName || "",
         email: user.email || "",
         address: user.address || "",
-        city: user.address || "",
+        city: user.city || "",
         zip: user.zip || "",
         country: user.country || "",
       });
