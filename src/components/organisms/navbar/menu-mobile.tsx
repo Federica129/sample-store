@@ -3,6 +3,7 @@ import { LanguageToggle } from "@/components/molecules/language-toggle/language-
 import { ModeToggle } from "@/components/molecules/mode-toggle";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -15,6 +16,8 @@ import { useTranslations } from "next-intl";
 import { IoBagHandle, IoHome } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
+import { logout } from "@/store/slices/auth.slice";
+import { useDispatch } from "react-redux";
 
 const menuMobileArray = (t: (key: string) => string) => [
   { label: "Home", href: "/", icon: <IoHome /> },
@@ -23,6 +26,7 @@ const menuMobileArray = (t: (key: string) => string) => [
 ];
 export function MenuMobile() {
   const t = useTranslations();
+  const dispatch = useDispatch();
 
   return (
     <div data-name="MenuMobile" className="md:hidden">
@@ -45,22 +49,24 @@ export function MenuMobile() {
 
           <nav className="flex flex-col gap-4" aria-label="Menu mobile">
             {menuMobileArray(t).map((p) => (
-              <Cta
-                variant="link"
-                size="link"
-                key={p.label}
-                href={p.href}
-                className="text-lg w-min flex items-center gap-2"
-              >
-                {p.icon}
-                {p.label}
-              </Cta>
+              <SheetClose key={p.label} asChild>
+                <Cta
+                  variant="link"
+                  size="link"
+                  href={p.href}
+                  className="text-lg w-min flex items-center gap-2"
+                >
+                  {p.icon}
+                  {p.label}
+                </Cta>
+              </SheetClose>
             ))}
             <Cta
               variant="link"
               size="link"
               className="text-lg text-orange w-min"
               icon={<MdLogout />}
+              onClick={() => dispatch(logout())}
             >
               {t("common.logout")}
             </Cta>

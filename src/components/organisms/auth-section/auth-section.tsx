@@ -44,7 +44,7 @@ export function AuthSection() {
       }
 
       if (email === userToLogin.email) {
-        dispatch(login({ ...userToLogin, isLogged: true })); // login con i dati dal localStorage
+        dispatch(login({ ...userToLogin, isLogged: true }));
       } else {
         setFormError(t("formErrors.login"));
       }

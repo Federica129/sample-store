@@ -4,11 +4,13 @@ import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button/button";
+import { useTranslations } from "next-intl";
 
 export function ModeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const isDark = resolvedTheme === "dark";
+  const t = useTranslations();
 
   React.useEffect(() => {
     setMounted(true);
@@ -29,7 +31,7 @@ export function ModeToggle() {
       variant="outline"
       size="icon"
       onClick={handleToggle}
-      aria-label="Toggle theme"
+      aria-label={t("ariaLabel.toggleTheme")}
       data-name="ModeToggle"
     >
       {isDark ? (
