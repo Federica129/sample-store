@@ -1,4 +1,5 @@
 import { hasLocale } from "next-intl";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { redirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -19,14 +20,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     redirect(`/${routing.defaultLocale}`);
