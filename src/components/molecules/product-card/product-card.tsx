@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { getStarRating } from "@/utils/functions/get-star-rating";
 import type { ProductCardProps } from "./product-card.props";
 import { Card } from "@/components/ui/card";
-import React from "react";
+import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/store/slices/cart.slice";
 import { toast } from "sonner";
@@ -16,10 +16,10 @@ const ProductCardComponent = (props: ProductCardProps) => {
   const dispatch = useDispatch();
   const t = useTranslations();
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     dispatch(addToCart(props));
     toast(t("messages.addedProduct", { title: props.title }));
-  };
+  }, [dispatch, t, props]);
 
   return (
     <Card data-name="ProductCard" className="w-full rounded-lg p-5">
