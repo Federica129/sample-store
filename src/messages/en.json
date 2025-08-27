@@ -78,5 +78,23 @@
     "noResult": "No products found for your search.",
     "emptyCart": "Your cart is empty",
     "addProduct": "Add products to your cart to see them here."
+  },
+  "seo": {
+    "home": {
+      "title": "Welcome to SampleStore",
+      "description": "Discover our latest products and best offers."
+    },
+    "products": {
+      "title": "Products | SampleStore",
+      "description": "Browse our products and find your favorite items."
+    },
+    "login": {
+      "title": "Login | SampleStore",
+      "description": "Access your account to view orders and manage your profile."
+    },
+    "profile": {
+      "title": "Profile | SampleStore",
+      "description": "Manage your profile."
+    }
   }
 }

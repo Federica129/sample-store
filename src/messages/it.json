@@ -78,5 +78,23 @@
     "noResult": "Nessun prodotto trovato per la tua ricerca.",
     "emptyCart": "Il carrello è vuoto",
     "addProduct": "Aggiungi prodotti al carrello per visualizzarli qui."
+  },
+  "seo": {
+    "home": {
+      "title": "Benvenuto su SampleStore",
+      "description": "Scopri i nostri ultimi prodotti e le migliori offerte."
+    },
+    "products": {
+      "title": "Prodotti | SampleStore",
+      "description": "Sfoglia i nostri prodotti e trova quello che stavi cercando."
+    },
+    "login": {
+      "title": "Accedi | SampleStore",
+      "description": "Accedi al tuo account per vedere gli ordini e gestire il profilo."
+    },
+    "profile": {
+      "title": "Profilo | SampleStore",
+      "description": "Gestisci il tuo profilo."
+    }
   }
 }
