@@ -30,6 +30,11 @@
   "profile": {
     "title": "Profilo"
   },
+  "notFound": {
+    "title": "Oops! 404",
+    "description": "Sembra che la pagina che cercavi sia sparita nel nulla.",
+    "cta": "Torna alla Home"
+  },
   "placeholder": {
     "email": "Inserisci la tua email"
   },
