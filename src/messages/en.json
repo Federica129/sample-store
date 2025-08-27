@@ -1,6 +1,100 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "common": {
+    "search": "Search...",
+    "total": "Total",
+    "language": "Language",
+    "logout": "Logout",
+    "openMenu": "Open menu",
+    "save": "Save",
+    "cancel": "Cancel",
+    "editProfile": "Edit Profile",
+    "login": "Login"
+  },
+  "ariaLabel": {
+    "openCart": "Open cart",
+    "itemsCart": "items in cart",
+    "addQuantity": "increase quantity",
+    "decreaseQuantity": "decrease quantity",
+    "remove": "remove item",
+    "toggleTheme": "toggle theme"
+  },
+  "welcome": {
+    "title": "Welcome",
+    "copy": "Discover the latest arrivals and the best deals just for you. <br/> Browse our products and find exactly what you’ve been looking for!",
+    "cta": "Go to products"
+  },
+  "products": {
+    "title": "Products",
+    "copy": "Discover the latest arrivals and the best deals just for you."
+  },
+  "profile": {
+    "title": "Profile"
+  },
+  "placeholder": {
+    "email": "Enter your email"
+  },
+  "sidebarCart": {
+    "title": "Your Cart",
+    "checkout": "Proceed to Checkout",
+    "continueShopping": "Continue Shopping"
+  },
+  "footer": {
+    "shop": "Shop",
+    "newArrivals": "New Arrivals",
+    "men": "Men",
+    "women": "Women",
+    "accessories": "Accessories",
+    "support": "Support",
+    "contacts": "Contacts",
+    "faq": "FAQ",
+    "returnsRefunds": "Returns & Refunds",
+    "shipping": "Shipping",
+    "followUs": "Follow us"
+  },
+  "fieldsValidation": {
+    "fieldName": {
+      "email": "Email",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "address": "Address",
+      "city": "City",
+      "zip": "ZIP Code",
+      "country": "Country"
+    },
+    "generic": {
+      "required": "Required field",
+      "invalid": "Invalid field",
+      "short2": "Minimum 2 characters required"
+    },
+    "email": { "invalid": "Invalid email address" }
+  },
+  "formErrors": {
+    "login": "Invalid email credentials"
+  },
+  "messages": {
+    "editSuccess": "Your changes have been saved successfully!",
+    "paymentSuccess": "Payment completed successfully!",
+    "addedProduct": "Product {title} added!",
+    "noResult": "No products found for your search.",
+    "emptyCart": "Your cart is empty",
+    "addProduct": "Add products to your cart to see them here."
+  },
+  "seo": {
+    "home": {
+      "title": "Welcome to SampleStore",
+      "description": "Discover our latest products and best offers."
+    },
+    "products": {
+      "title": "Products | SampleStore",
+      "description": "Browse our products and find your favorite items."
+    },
+    "login": {
+      "title": "Login | SampleStore",
+      "description": "Access your account to view orders and manage your profile."
+    },
+    "profile": {
+      "title": "Profile | SampleStore",
+      "description": "Manage your profile."
+    }
   }
 }

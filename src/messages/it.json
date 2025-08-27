@@ -1,6 +1,100 @@
 {
-  "HomePage": {
-    "title": "Ciao world!",
-    "about": "Vai nella about page"
+  "common": {
+    "search": "Cerca...",
+    "total": "Totale",
+    "language": "Lingua",
+    "logout": "Esci",
+    "openMenu": "Apri menu",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "editProfile": "Modifica profilo",
+    "login": "Accedi"
+  },
+  "ariaLabel": {
+    "openCart": "Apri carrello",
+    "itemsCart": "articoli nel carrello",
+    "addQuantity": "aumenta quantità",
+    "decreaseQuantity": "diminuisci quantità",
+    "remove": "rimuovi",
+    "toggleTheme": "cambia tema"
+  },
+  "welcome": {
+    "title": "Benvenuto",
+    "copy": "Scopri le ultime novità e le migliori offerte pensate per te. Sfoglia i nostri prodotti e trova quello che stavi cercando!",
+    "cta": "Scopri i prodotti"
+  },
+  "products": {
+    "title": "Prodotti",
+    "copy": "Scopri le ultime novità e le migliori offerte pensate per te."
+  },
+  "profile": {
+    "title": "Profilo"
+  },
+  "placeholder": {
+    "email": "Inserisci la tua email"
+  },
+  "sidebarCart": {
+    "title": "Il tuo carrello",
+    "checkout": "Vai al checkout",
+    "continueShopping": "Continua lo shopping"
+  },
+  "footer": {
+    "shop": "Shop",
+    "newArrivals": "Nuovi Arrivi",
+    "men": "Uomo",
+    "women": "Donna",
+    "accessories": "Accessori",
+    "support": "Assistenza",
+    "contacts": "Contatti",
+    "faq": "FAQ",
+    "returnsRefunds": "Resi & Rimborsi",
+    "shipping": "Spedizioni",
+    "followUs": "Seguici"
+  },
+  "fieldsValidation": {
+    "fieldName": {
+      "email": "Email",
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "address": "Indirizzo",
+      "city": "Città",
+      "zip": "CAP",
+      "country": "Paese"
+    },
+    "generic": {
+      "required": "Campo obbligatorio.",
+      "invalid": "Campo non valido",
+      "short2": "Richiesto almeno 2 caratteri"
+    },
+    "email": { "invalid": "Indirizzo email non valido." }
+  },
+  "formErrors": {
+    "login": "Credenziali Email non valido"
+  },
+  "messages": {
+    "editSuccess": "Le tue modifiche sono state salvate con successo!",
+    "paymentSuccess": "Pagamento avvenuto con successo!",
+    "addedProduct": "Articolo {title} aggiunto!",
+    "noResult": "Nessun prodotto trovato per la tua ricerca.",
+    "emptyCart": "Il carrello è vuoto",
+    "addProduct": "Aggiungi prodotti al carrello per visualizzarli qui."
+  },
+  "seo": {
+    "home": {
+      "title": "Benvenuto su SampleStore",
+      "description": "Scopri i nostri ultimi prodotti e le migliori offerte."
+    },
+    "products": {
+      "title": "Prodotti | SampleStore",
+      "description": "Sfoglia i nostri prodotti e trova quello che stavi cercando."
+    },
+    "login": {
+      "title": "Accedi | SampleStore",
+      "description": "Accedi al tuo account per vedere gli ordini e gestire il profilo."
+    },
+    "profile": {
+      "title": "Profilo | SampleStore",
+      "description": "Gestisci il tuo profilo."
+    }
   }
 }
