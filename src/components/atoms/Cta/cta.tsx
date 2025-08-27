@@ -15,7 +15,7 @@ export function Cta({ href = "", children, ...rest }: CtaProps) {
 
   if (href && isExternalLink(href)) {
     return (
-      <Button data-name="Cta" asChild {...rest}>
+      <Button data-name="Cta" asChild {...rest} data-testid="cta__external">
         <a href={href} target="_blank" rel="noopener noreferrer">
           {content}
         </a>
@@ -25,14 +25,14 @@ export function Cta({ href = "", children, ...rest }: CtaProps) {
 
   if (href) {
     return (
-      <Button data-name="Cta" asChild {...rest}>
+      <Button data-name="Cta" asChild {...rest} data-testid="cta__internal">
         <Link href={href}>{content}</Link>
       </Button>
     );
   }
 
   return (
-    <Button data-name="Cta" {...rest}>
+    <Button data-name="Cta" {...rest} data-testid="cta__default">
       {content}
     </Button>
   );
