@@ -7,8 +7,20 @@ import { getStarRating } from "@/utils/functions/get-star-rating";
 import type { ProductCardProps } from "./product-card.props";
 import { Card } from "@/components/ui/card";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/store/slices/cart.slice";
+import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 const ProductCardComponent = (props: ProductCardProps) => {
+  const dispatch = useDispatch();
+  const t = useTranslations();
+
+  const handleClick = () => {
+    dispatch(addToCart(props));
+    toast(t("messages.addedProduct", { title: props.title }));
+  };
+
   return (
     <Card data-name="ProductCard" className="w-full rounded-lg p-5">
       <div className="relative w-full mx-auto mb-3 h-[250px] max-w-[230px]">
@@ -18,6 +30,7 @@ const ProductCardComponent = (props: ProductCardProps) => {
           fill
           sizes="230px"
           className="object-contain"
+          priority
         />
       </div>
 
@@ -35,10 +48,8 @@ const ProductCardComponent = (props: ProductCardProps) => {
         </div>
 
         <div className="mt-4 flex items-center justify-between">
-          <span className="text-lg font-bold text-gray-900 dark:text-gray-100">
-            €{props.price}
-          </span>
-          <Button variant="tertiary">
+          <span className="text-lg font-bold text-primary">€{props.price}</span>
+          <Button variant="tertiary" onClick={() => handleClick()}>
             <MdAddShoppingCart size={20} />
           </Button>
         </div>

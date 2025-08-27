@@ -1,7 +1,7 @@
 {
   "common": {
     "search": "Search...",
-    "noResult": "No products found for your search.",
+    "total": "Total",
     "language": "Language",
     "logout": "Logout",
     "openMenu": "Open menu",
@@ -9,6 +9,14 @@
     "cancel": "Cancel",
     "editProfile": "Edit Profile",
     "login": "Login"
+  },
+  "ariaLabel": {
+    "openCart": "Open cart",
+    "itemsCart": "items in cart",
+    "addQuantity": "increase quantity",
+    "decreaseQuantity": "decrease quantity",
+    "remove": "remove item",
+    "toggleTheme": "toggle theme"
   },
   "welcome": {
     "title": "Welcome",
@@ -24,6 +32,11 @@
   },
   "placeholder": {
     "email": "Enter your email"
+  },
+  "sidebarCart": {
+    "title": "Your Cart",
+    "checkout": "Proceed to Checkout",
+    "continueShopping": "Continue Shopping"
   },
   "footer": {
     "shop": "Shop",
@@ -59,6 +72,11 @@
     "login": "Invalid email credentials"
   },
   "messages": {
-    "editSuccess": "Your changes have been saved successfully!"
+    "editSuccess": "Your changes have been saved successfully!",
+    "paymentSuccess": "Payment completed successfully!",
+    "addedProduct": "Product {title} added!",
+    "noResult": "No products found for your search.",
+    "emptyCart": "Your cart is empty",
+    "addProduct": "Add products to your cart to see them here."
   }
 }

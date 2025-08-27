@@ -1,7 +1,7 @@
 {
   "common": {
     "search": "Cerca...",
-    "noResult": "Nessun prodotto trovato per la tua ricerca.",
+    "total": "Totale",
     "language": "Lingua",
     "logout": "Esci",
     "openMenu": "Apri menu",
@@ -9,6 +9,14 @@
     "cancel": "Annulla",
     "editProfile": "Modifica profilo",
     "login": "Accedi"
+  },
+  "ariaLabel": {
+    "openCart": "Apri carrello",
+    "itemsCart": "articoli nel carrello",
+    "addQuantity": "aumenta quantità",
+    "decreaseQuantity": "diminuisci quantità",
+    "remove": "rimuovi",
+    "toggleTheme": "cambia tema"
   },
   "welcome": {
     "title": "Benvenuto",
@@ -24,6 +32,11 @@
   },
   "placeholder": {
     "email": "Inserisci la tua email"
+  },
+  "sidebarCart": {
+    "title": "Il tuo carrello",
+    "checkout": "Vai al checkout",
+    "continueShopping": "Continua lo shopping"
   },
   "footer": {
     "shop": "Shop",
@@ -59,6 +72,11 @@
     "login": "Credenziali Email non valido"
   },
   "messages": {
-    "editSuccess": "Le tue modifiche sono state salvate con successo!"
+    "editSuccess": "Le tue modifiche sono state salvate con successo!",
+    "paymentSuccess": "Pagamento avvenuto con successo!",
+    "addedProduct": "Articolo {title} aggiunto!",
+    "noResult": "Nessun prodotto trovato per la tua ricerca.",
+    "emptyCart": "Il carrello è vuoto",
+    "addProduct": "Aggiungi prodotti al carrello per visualizzarli qui."
   }
 }

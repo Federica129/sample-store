@@ -31,12 +31,11 @@ export function ProtectedRoute({ children, isLoginPage = false }: Props) {
     }
   }, [hydrated, user, isLoginPage]);
 
-  if (!hydrated)
-    return <div className="mt-[65px] md:min-h-[calc(100dvh-65px)]" />;
+  if (!hydrated) return <div className="mt-[65px] min-h-[calc(100dvh-65px)]" />;
   if (!isLoginPage && !user.isLogged)
-    return <div className="mt-[65px] md:min-h-[calc(100dvh-65px)]" />;
+    return <div className="mt-[65px] min-h-[calc(100dvh-65px)]" />;
   if (isLoginPage && user.isLogged)
-    return <div className="mt-[65px] md:min-h-[calc(100dvh-65px)]" />;
+    return <div className="mt-[65px] min-h-[calc(100dvh-65px)]" />;
 
   return <>{children}</>;
 }
